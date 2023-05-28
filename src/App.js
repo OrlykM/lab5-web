@@ -2,18 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from "./pages/LandingPage";
 import UsersListPage from "./pages/UsersListPage";
 import UserSettingPage from "./pages/UserSettingPage";
-import UserProfilePage from "./pages/UserProfilePage";
+//import UserProfilePage from "./pages/UserProfilePage";
 import SingleAdvertisementPage from "./pages/SingleAdvertisementPage";
 import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage";
+//import LoginPage from "./pages/LoginPage";
 import ErrorPage from "./pages/ErrorPage";
 import CreateNewAdvertisementPage from "./pages/CreateNewAdvertisementPage";
 import AllAdvertismentMainPage from "./pages/AllAdvertismentMainPage";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {ROUTES} from "./routes/routes";
 
-import EditAdvertismentPage from "./pages/EditAdvertismentPage";
-import ResetPassword from "./pages/ResetPasswordPage";
+//import EditAdvertismentPage from "./pages/EditAdvertismentPage";
+//import ResetPassword from "./pages/ResetPasswordPage";
 import Footer from "./Templates/Footer";
 import IsLogined from "./routes/ProtectedRoutes";
 import HeaderLogined from "./Templates/HeaderLogined";
@@ -34,18 +34,6 @@ function App() {
               <ErrorPage/>
             </>
           }/>
-          <Route path={ROUTES.RESETPASSWORD} element={
-            <>
-              <HeaderWithLogo></HeaderWithLogo>
-              <ResetPassword></ResetPassword>
-            </>
-          }/>
-          <Route path={ROUTES.CHANGEPASSWORD} element={
-            <>
-              <HeaderWithLogo></HeaderWithLogo>
-              <ResetPassword></ResetPassword>
-            </>
-          }/>
           <Route path={ROUTES.HOME} element={
             <>
               <IsLoginedHeader/>
@@ -55,7 +43,6 @@ function App() {
           <Route path={ROUTES.LOGIN} element={
             <>
             <HeaderWithLogo></HeaderWithLogo>
-            <LoginPage/>
             </>}/>
           <Route path={ROUTES.REGISTER} element={ <>
             <HeaderWithLogo></HeaderWithLogo>
@@ -91,7 +78,6 @@ function App() {
             <>
               <IsLogined/>
               <IsLoginedHeader/>
-                <UserProfilePage/>
             </>
           }/>
 
@@ -113,7 +99,6 @@ function App() {
             <>
               <IsLogined />
               <IsLoginedHeader/>
-              <EditAdvertismentPage/>
             </>
           }/>
           <Route path={ROUTES.ADMINAPPROVE} element={

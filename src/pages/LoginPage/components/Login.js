@@ -29,19 +29,18 @@ function Login() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <br/>
-            <label>
+            <br />
+            <label htmlFor="emailInput">
                 Email:
             </label>
-            <input type="text" value={username} onChange={(event) => setUsername(event.target.value)} />
-            <br/>
-            <label>
+            <input id="emailInput" type="text" value={username} onChange={(event) => setUsername(event.target.value)} />
+            <br />
+            <label htmlFor="passwordInput">
                 Password:
             </label>
-            <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
+            <input id="passwordInput" type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
             <button type="submit">Log in</button>
-            <span>Forgot password ?<Link to={"/reset"}>Reset password</Link></span>
-            <br/>
+            <br />
         </form>
     );
 }

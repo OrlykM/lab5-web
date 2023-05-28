@@ -2,11 +2,16 @@
   "name": "lab3",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "axios-mock-adapter": "^1.21.4",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
@@ -19,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,6 +46,9 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^27.5.1",
     "node-sass": "^7.0.3",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2"
